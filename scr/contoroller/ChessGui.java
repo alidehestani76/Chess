@@ -1,6 +1,7 @@
 package contoroller;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -14,22 +15,45 @@ import java.util.Scanner;
  * Created by amirsaeed on 5/27/2017.
  */
 public class ChessGui extends Application{
-    private NetworkConnection networkConnection;
-    private ChessBoard chessBoard;
+
+
     private Pane root;
     private boolean offlineMode=false;
+
+    private MenuConotoroller menuConotoroller;
+    public static Stage stage;
+
+    public  boolean isOfflineMode() {
+        return offlineMode;
+    }
+
+    public void setOfflineMode(boolean offlineMode) {
+        this.offlineMode = offlineMode;
+    }
+
     @Override
     public void start(Stage stage) throws Exception {
+            ChessGui.stage = stage;
 
-        root=new Pane();
-        chessBoard = new ChessBoard();
-        Scanner scanner= new Scanner(System.in);
-        int a= scanner.nextInt();
-        if(a==1){
-            networkConnection= new Server(8080,chessBoard);
+            menuConotoroller=new MenuConotoroller();
+
+
+            ChessGui.stage.setScene(new Scene(
+                    FXMLLoader.load(getClass().getResource("/view/online.fxml")), 600, 400));
+
+            ChessGui.stage.show();
+
+//            System.out.println(menuConotoroller.getOffline());
+
+        /*
+//        Scanner scanner= new Scanner(System.in);
+//        int a= scanner.nextInt();
+        if(startMenu.isOnline()) {
+            if(chooseMenu.isWhite())
+                networkConnection = new Server(serverMenu.getPort(), chessBoard);
+            else
+                networkConnection = new Client(clientMenu.getIp(), clientMenu.getPort(), chessBoard);
         }
-        else if (a==2)
-            networkConnection= new Client("127.0.0.1",8080,chessBoard);
         else
             offlineMode=true;
         if (!offlineMode)
@@ -50,8 +74,8 @@ public class ChessGui extends Application{
             stage.setTitle("offline");
             chessBoard.setGameController();
         }
-
         chessBoard.setMode(offlineMode);
         stage.show();
+        */
     }
 }

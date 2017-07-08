@@ -56,8 +56,8 @@ public class ChessBoard {
     public void setGameController() {
         this.gameController = new GameController(this,white);
     }
-    public void setMode(boolean OfflineMode){
-        gameController.setIsofline(OfflineMode);
+    public void setMode(boolean Offline){
+        gameController.setIsofline(Offline);
     }
     public void setNetworkConnection(NetworkConnection networkConnection){
         this.networkConnection=networkConnection;

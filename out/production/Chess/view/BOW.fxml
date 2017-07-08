@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:controller="contoroller.BOW" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="93.0">
+         <children>
+            <ImageView fitHeight="301.0" fitWidth="600.0">
+               <image>
+                  <Image url="@10.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label prefHeight="90.0" prefWidth="600.0" text="Choose your color in game :">
+         <font>
+            <Font name="System Bold Italic" size="38.0" />
+         </font>
+      </Label>
+      <Button id="white" fx:id="White" layoutY="93.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="600.0" style="-fx-background-color: transparent;" />
+      <Button id="black" fx:id="Black" layoutY="243.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="600.0" style="-fx-background-color: transparent;" />
+   </children>
+</AnchorPane>

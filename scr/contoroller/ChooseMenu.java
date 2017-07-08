@@ -13,8 +13,11 @@ import java.util.ResourceBundle;
  * Created by Ali on 6/2/2017.
  */
 public class ChooseMenu implements Initializable {
-    boolean white=false ;
-    boolean black=false ;
+    boolean white=true ;
+    private MenuConotoroller menuConotoroller;
+    ChooseMenu(MenuConotoroller menuConotoroller){
+        this.menuConotoroller=menuConotoroller;
+    }
     @FXML
     private Button whitebutton;
     @FXML
@@ -30,8 +33,12 @@ public class ChooseMenu implements Initializable {
         blackbutton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                black=true ;
+                white=false ;
             }
         });
+    }
+
+    public boolean isWhite() {
+        return white;
     }
 }

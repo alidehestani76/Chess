@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:controller="contoroller.pawn_endWhite" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="262.0" prefWidth="690.0" style="-fx-background-color: CHOCOLATE;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="khnight" layoutY="98.0" mnemonicParsing="false" prefHeight="164.0" prefWidth="172.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="queen" layoutX="172.0" layoutY="98.0" mnemonicParsing="false" prefHeight="164.0" prefWidth="172.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="bishop" layoutX="344.0" layoutY="98.0" mnemonicParsing="false" prefHeight="164.0" prefWidth="172.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="rock" layoutX="516.0" layoutY="98.0" mnemonicParsing="false" prefHeight="164.0" prefWidth="172.0" style="-fx-background-color: transparent;" />
+      <Label layoutX="9.0" prefHeight="68.0" prefWidth="499.0" style="-fx-background-color: transparent;" text="Please choose one of this pieces :" textFill="#0036ff">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="164.0" fitWidth="172.0" layoutY="98.0">
+         <image>
+            <Image url="@knight1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="164.0" fitWidth="172.0" layoutX="173.0" layoutY="98.0">
+         <image>
+            <Image url="@queen1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="164.0" fitWidth="172.0" layoutX="516.0" layoutY="98.0">
+         <image>
+            <Image url="@bishop1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="164.0" fitWidth="172.0" layoutX="344.0" layoutY="98.0">
+         <image>
+            <Image url="@rock1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
